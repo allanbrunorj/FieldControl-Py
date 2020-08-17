@@ -1,6 +1,6 @@
 # FieldControl-Py
 
-Esse repositório contém um wrapper em python da API da FieldControl.\n\n
+Esse repositório contém um wrapper em python da API da FieldControl.
 
 Os objetivos do projeto são:
 
