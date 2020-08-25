@@ -1,6 +1,6 @@
 import requests
 import json
-API_KEY = 'YjJlM2RkZDEtZTQyOS00NTc3LTliY2MtZjQ0ZGQyYTllYjI3OjE5NTY3'
+
 
 class FieldControl:
     def __init__(self, API_KEY):
@@ -71,7 +71,8 @@ class FieldControl:
 #------------------------ INNER FUNCTIONS --------------------------
 
     def __simple_request__(self, url, id_retrieve):
-        request_result = requests.get(f'{url}:"{id_retrieve}"',
+
+        request_result = requests.get(f'{url}{id_retrieve}',
         headers={'X-Api-Key': self.key})
         if request_result.status_code != 200:
             raise Exception("ID not valid")
@@ -82,9 +83,7 @@ class FieldControl:
 # true=True
 # null=None
 
-api = FieldControl(API_KEY)
-client = api.get_client('NDE2OTY2OjE5NTY3')
-print(client)
+
 
 # print(client)
 #REQUEST QUE PEGA AS ATIVIDADES
